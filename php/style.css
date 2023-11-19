@@ -1,0 +1,75 @@
+ body {
+  font-size: 6em; 
+  text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 300px 20px; /*左右３０上下１０*/
+}
+
+.nav {
+	display: flexbox;
+}
+
+.flex {
+	display: flexbox;
+	flex-direction: column;
+}
+
+/* テストが表示される領域 */
+.test {
+  margin-top: 20px;
+  padding: 80px 40px;
+  /* background-color: #666; */
+  font-weight: bold;
+  color: #fff;
+}
+
+.radio {
+	transform:scale(3.0);
+}
+
+
+/* -------------以下チェックボックス------------- */
+.checkbox {
+	margin:			0 0 10px 20px;
+}
+/* ラベルのスタイル　*/
+.checkbox {
+	padding-left:		38px;			/* ラベルの位置 */
+	font-size:		32px;
+	line-height:		32px;
+	display:		inline-block;
+	cursor:			pointer;
+	position:		relative;
+}
+
+/* ボックスのスタイル */
+.checkbox {
+	content:		'';
+	width:			60px;			/* ボックスの横幅 */
+	height:			60px;			/* ボックスの縦幅 */
+	display:		inline-block;
+	position:		absolute;
+	left:			0;
+	background-color:	#fff;
+	box-shadow:		inset 1px 2px 3px 0px #000;
+	border-radius:		6px 6px 6px 6px;
+}
+/* 元のチェックボックスを表示しない */
+.checkbox input[type=checkbox] {
+	display:		none;
+}
+/* チェックした時のスタイル */
+.checkbox input[type=checkbox]:checked {
+	content:		'\2713';		/* チェックの文字 */ 
+	font-size:		34px;			/* チェックのサイズ */
+	color:			#fff;			/* チェックの色 */
+	background-color:	#06f;			/* チェックした時の色 */
+}
+/* -------------チェックボックス------------- */
