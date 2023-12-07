@@ -8,13 +8,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <input class="checkbox" type="checkbox">
-  <p>question</p>
-  <p>問題</p>
-  <div class="flex">
-    <p>×</p>
-    <p>△</p>
-    <p>〇</p>
+  <div class="b">
+    <input class="checkbox" type="checkbox">
+    <p>question</p>
+    <p>問題</p>
+    <div class="flex">
+    <table>
+      <tr>
+          <th>×</th>
+          <th>△</th>
+          <th>〇</th>
+      </tr>
+    </table>
+    </div>
   </div>
+  
 </body>
 
