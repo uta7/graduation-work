@@ -3,9 +3,26 @@ body {
   font-size: 2em; 
   text-align: center;
 }
-#nav{
-	display: flex;
+
+#nav {
+	background-color: antiquewhite;
 }
+
+#nav ul li a:active {
+	color: black;
+}
+
+#nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav ul li {
+  display: inline-block; 
+	margin: 1% 2%;
+}
+
 .flex {
 	position: relative;
 	display: flexbox;
@@ -16,9 +33,19 @@ body {
 	display: flexbox;
 	flex-direction: column;
 }
+
 /*---------- 単語帳 ----------*/
+.flexPa {
+	display: flex;
+	justify-content: center;
+}
+
+.marginChi {
+	margin-right: 10%;
+}
+
 #testStartBtn {
-	transform:scale(10.0);
+	transform:scale(3.0);
 }
 
 .radios {
@@ -28,14 +55,15 @@ body {
 }
 
 .radio {
-	transform:scale(3.0);
+	transform:scale(2.0);
 	margin: 0.3rem;
+	padding: 0.3rem;
 }
 
 .badBtn {
-	width: 1em;
-	height: 1em;
-	font-size: 90%;
+	width: 50%;
+	height: 50%;
+	font-size: 50%;
 	text-align: center;
 }
 
