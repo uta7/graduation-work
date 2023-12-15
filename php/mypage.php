@@ -11,6 +11,10 @@
 <body>
   <?php include "header.php" ?>
 
+
+
+
+
   <form name="pet_sort">
         <div class="select_box">
             <select name="pets" id="pets" class="pets_filter">
@@ -161,6 +165,10 @@ SortBtn.addEventListener('click',function(){
     }//for終わり
 });//function終わり
     </script>
+
+
+
+
 
 
   <h2>登録済みの単語帳一覧</h2>

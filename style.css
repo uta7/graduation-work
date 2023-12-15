@@ -1,0 +1,148 @@
+/*---------- 共通 ----------*/
+body {
+  font-size: 2em; 
+  text-align: center;
+}
+
+#nav {
+	background-color: #d48537;
+}
+
+#nav ul li a:active {
+	color: black;
+}
+
+#nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav ul li {
+  display: inline-block; 
+	margin: 1% 2%;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+#nav ul li a:hover {
+	text-decoration: underline;
+}
+
+.flex {
+	position: relative;
+	display: flexbox;
+	flex-direction: row;
+	vertical-align: center;
+}
+.flex-c {
+	display: flexbox;
+	flex-direction: column;
+}
+
+/*---------- 単語帳 ----------*/
+.flexPa {
+	display: flex;
+	justify-content: center;
+}
+
+.marginChi {
+	margin-right: 10%;
+}
+
+.testStartBtn {
+	transform:scale(2.5);
+	margin: 5% 10%;
+}
+
+.radios {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.radio {
+	transform:scale(2.0);
+	margin: 0.3rem;
+	padding: 0.3rem;
+	accent-color: orange;
+}
+
+.badBtn {
+	/* width: 50%;
+	height: 50%; */
+	font-size: 50%;
+	text-align: center;
+}
+
+table {
+	width: 100vw;
+	/* border-collapse: separate;
+	border-spacing: 10px 10px; */
+	vertical-align: middle;
+}
+
+table, td, th {
+	border: 1px black solid;
+}
+
+.left {
+	position: absolute;
+	top: -55%;
+	left: 10%;
+}
+.tangochou {
+	margin: 4% auto;
+}
+.tangochou a {
+	color: #000;
+	text-decoration: none;
+}
+.tangochou a:hover {
+	text-decoration: underline;
+}
+/*---------- test ----------*/
+.backColorTest {
+	background-color: white;
+	font-weight: bold;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+#option2 {
+	display: flex;
+}
+
+.testBtn {
+	font-size: 100%;
+	width: 33vw;
+	height: auto;
+	padding: 2rem 1rem;
+	border: #000 2px solid;
+}
+
+#wrong {
+	background-color: rgba(255, 0, 0, 0.42);
+}
+
+#normal {
+	background-color: rgba(0, 255, 0, 0.42);
+}
+
+#right {
+	background-color: rgba(0, 0, 255, 0.42);;
+}
+
+.fontsizeSmall {
+	font-size: 70%;
+	margin: 1% 1%;
+}
+
+.checkbox {
+	accent-color: orange;
+	transform: scale(2.5);
+}
