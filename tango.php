@@ -10,30 +10,30 @@
     <input id="radio2" class="radio" type="radio" name="word" onclick="hiddenWords(<?= $row['No'] ?>, 'Eng');" ><label for="radio2">英語を隠す</label>
     <input id="radio3" class="radio" type="radio" name="word" onclick="hiddenWords(<?= $row['No'] ?>, 'Jp');" ><label for="radio3">日本語を隠す</label>
   </div>
-        <table>
-          <thead>
-            <tr><th>苦手度</th><th>英語</th><th>日本語</th></tr>
-          <thead>
-        <tbody>
-        <?php foreach($table as $row): ?>
-          <tr>
-            <td class="td" >
-              <div class="flex">
-                <div class="left">
-                  <!-- 苦手度上昇ボタン -->
-                  <button class="badBtn" id="up" type="button" onclick="updateBad(<?= $row['No'] ?>, 'up');">▲</button>
-                  <!-- 苦手度下降ボタン --><br>
-                  <button class="badBtn" id="down" type="button" onclick="updateBad(<?= $row['No'] ?>, 'down');">▼</button>
-                </div>
-                <p id="bad<?php echo $row["No"]; ?>">0<p>
-              </div>
-            </td>
-            <td id="EngWord<?php echo $row["No"];?>"><?= $row["Eng"] ?></td>
-            <td id="JpWord<?php echo $row["No"];?>"><?= $row["Ja"] ?></td>
-          </tr>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
+  <table>
+    <thead>
+      <tr><th>苦手度</th><th>英語</th><th>日本語</th></tr>
+    <thead>
+    <tbody>
+      <?php foreach($table as $row): ?>
+      <tr>
+        <td class="td" >
+          <div class="flex">
+            <div class="left">
+              <!-- 苦手度上昇ボタン -->
+              <button class="badBtn" id="up" type="button" onclick="updateBad(<?= $row['No'] ?>, 'up');">▲</button>
+              <!-- 苦手度下降ボタン --><br>
+              <button class="badBtn" id="down" type="button" onclick="updateBad(<?= $row['No'] ?>, 'down');">▼</button>
+            </div>
+            <p id="bad<?php echo $row["No"]; ?>">0<p>
+          </div>
+        </td>
+        <td id="EngWord<?php echo $row["No"];?>"><?= $row["Eng"] ?></td>
+        <td id="JpWord<?php echo $row["No"];?>"><?= $row["Ja"] ?></td>
+      </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
 
   <script>
   function updateBad(rowId, type) {

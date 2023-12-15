@@ -54,7 +54,7 @@ body {
 
 .testStartBtn {
 	transform:scale(2.5);
-	margin: 1% 10%;
+	margin: 5% 10%;
 }
 
 .radios {
@@ -71,22 +71,26 @@ body {
 }
 
 .badBtn {
-	width: 50%;
-	height: 50%;
+	/* width: 50%;
+	height: 50%; */
 	font-size: 50%;
 	text-align: center;
 }
 
 table {
 	width: 100vw;
-	border-collapse: separate;
-	border-spacing: 10px 10px; /*左右10上下10*/
+	/* border-collapse: separate;
+	border-spacing: 10px 10px; */
 	vertical-align: middle;
+}
+
+table, td, th {
+	border: 1px black solid;
 }
 
 .left {
 	position: absolute;
-	top: 0;
+	top: -55%;
 	left: 10%;
 }
 .tangochou {

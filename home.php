@@ -16,12 +16,12 @@
   <div class="tangochou">
     <input class="checkbox" type="checkbox">
     <image></image>
-    <a href="tangochou.php">単語帳名1</a>
+    <a href="tangochou.php">金のフレーズ</a>
   </div>
-  <div class="tangochou">
+  <!-- <div class="tangochou">
     <input class="checkbox" type="checkbox">
     <image></image>
     <a href="tangochou.php">単語帳名2</a>
-  </div>
+  </div> -->
   </div>
 </body>

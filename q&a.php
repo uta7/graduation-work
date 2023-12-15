@@ -18,7 +18,11 @@
         <div class="fontsizeSmall">この単語を登録する</div>
       </div> 
       <p><?php echo $table[0]["Eng"]; ?></p>
-      <p id="option1" class="hidden"><?php echo $table[0]["Ja"]; ?></p>
+      <p id="option1" class="hidden">
+        <?php
+          echo $table[0]["Ja"];
+        ?>
+      </p>
     </div>
     <div >
       <div id="option2" class="hidden" >

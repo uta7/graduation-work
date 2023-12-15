@@ -10,10 +10,10 @@
  
 <body>
   <?php include "header.php" ?>
-  
-  <div>
+  <h2>金のフレーズ</h2>
+  <div class="flexPa">
     <input class="checkbox" type="checkbox">
-    <p class="fontSize" >この単語帳をマイページに登録する</p>
+    <p class="fontsizeSmall" >この単語帳をマイページに登録する</p>
   </div>
   <?php include "tango.php" ?>
 </body>
