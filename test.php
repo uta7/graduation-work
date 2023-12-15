@@ -12,7 +12,10 @@
 <?php include "header.php" ?>
 <?php include "data.php" ?>
   <div class="backColorTest">
-    <input class="checkbox" type="checkbox">
+    <div class="flexPa">
+      <input class="checkbox" type="checkbox">
+      <div class="fontsizeSmall">この単語を登録する</div>
+    </div> 
     <p id="question"><?php echo $table[0]["Ja"]; ?></p>
     <!-- タイプした文字 -->
     <p id="out"></p>

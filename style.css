@@ -5,7 +5,7 @@ body {
 }
 
 #nav {
-	background-color: lavender;
+	background-color: #d48537;
 }
 
 #nav ul li a:active {
@@ -25,6 +25,7 @@ body {
 
 #nav ul li a {
 	text-decoration: none;
+	color: #fff;
 }
 #nav ul li a:hover {
 	text-decoration: underline;
@@ -66,6 +67,7 @@ body {
 	transform:scale(2.0);
 	margin: 0.3rem;
 	padding: 0.3rem;
+	accent-color: orange;
 }
 
 .badBtn {
@@ -131,41 +133,12 @@ table {
 	background-color: rgba(0, 0, 255, 0.42);;
 }
 
-/* -------------以下チェックボックス------------- */
-.checkbox {
-	margin:			0 0 10px 20px;
-}
-/* ラベルのスタイル　*/
-.checkbox {
-	padding-left:		38px;			/* ラベルの位置 */
-	font-size:		32px;
-	line-height:		32px;
-	display:		inline-block;
-	cursor:			pointer;
-	position:		relative;
+.fontsizeSmall {
+	font-size: 70%;
+	margin: 1% 1%;
 }
 
-/* ボックスのスタイル */
 .checkbox {
-	content:		'';
-	width:			60px;			/* ボックスの横幅 */
-	height:			60px;			/* ボックスの縦幅 */
-	display:		inline-block;
-	position:		absolute;
-	left:			0;
-	background-color:	#fff;
-	box-shadow:		inset 1px 2px 3px 0px #000;
-	border-radius:		6px 6px 6px 6px;
+	accent-color: orange;
+	transform: scale(2.5);
 }
-/* 元のチェックボックスを表示しない */
-.checkbox input[type=checkbox] {
-	display:		none;
-}
-/* チェックした時のスタイル */
-.checkbox input[type=checkbox]:checked {
-	content:		'\2713';		/* チェックの文字 */ 
-	font-size:		34px;			/* チェックのサイズ */
-	color:			#fff;			/* チェックの色 */
-	background-color:	#06f;			/* チェックした時の色 */
-}
-/* -------------チェックボックス------------- */
