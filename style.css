@@ -5,7 +5,7 @@ body {
 }
 
 #nav {
-	background-color: antiquewhite;
+	background-color: lavender;
 }
 
 #nav ul li a:active {
@@ -21,6 +21,13 @@ body {
 #nav ul li {
   display: inline-block; 
 	margin: 1% 2%;
+}
+
+#nav ul li a {
+	text-decoration: none;
+}
+#nav ul li a:hover {
+	text-decoration: underline;
 }
 
 .flex {
@@ -44,8 +51,9 @@ body {
 	margin-right: 10%;
 }
 
-#testStartBtn {
-	transform:scale(3.0);
+.testStartBtn {
+	transform:scale(2.5);
+	margin: 1% 10%;
 }
 
 .radios {
@@ -79,22 +87,48 @@ table {
 	top: 0;
 	left: 10%;
 }
+.tangochou {
+	margin: 4% auto;
+}
+.tangochou a {
+	color: #000;
+	text-decoration: none;
+}
+.tangochou a:hover {
+	text-decoration: underline;
+}
 /*---------- test ----------*/
 .backColorTest {
-	background-color: rgb(255, 191, 0);
+	background-color: white;
+	font-weight: bold;
 }
 
 .hidden {
 	visibility: hidden;
 }
 
-/* テストが表示される領域 */
-.test {
-  margin-top: 20px;
-  padding: 80px 40px;
-  /* background-color: #666; */
-  font-weight: bold;
-  color: rgb(109, 77, 77);
+#option2 {
+	display: flex;
+}
+
+.testBtn {
+	font-size: 100%;
+	width: 33vw;
+	height: auto;
+	padding: 2rem 1rem;
+	border: #000 2px solid;
+}
+
+#wrong {
+	background-color: rgba(255, 0, 0, 0.42);
+}
+
+#normal {
+	background-color: rgba(0, 255, 0, 0.42);
+}
+
+#right {
+	background-color: rgba(0, 0, 255, 0.42);;
 }
 
 /* -------------以下チェックボックス------------- */

@@ -13,13 +13,15 @@
 
   <h2>単語帳一覧</h2>
   <div>
+  <div class="tangochou">
     <input class="checkbox" type="checkbox">
     <image></image>
-    <p>単語帳名1</p>
+    <a href="tangochou.php">単語帳名1</a>
   </div>
-  <div>
+  <div class="tangochou">
     <input class="checkbox" type="checkbox">
     <image></image>
-    <p>単語帳名2</p>
+    <a href="tangochou.php">単語帳名2</a>
+  </div>
   </div>
 </body>

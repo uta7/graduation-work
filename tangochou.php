@@ -13,7 +13,7 @@
   
   <div>
     <input class="checkbox" type="checkbox">
-    <p class="fontSize" >この単語をマイページに登録する</p>
+    <p class="fontSize" >この単語帳をマイページに登録する</p>
   </div>
   <?php include "tango.php" ?>
 </body>

@@ -21,32 +21,13 @@
          <li>
             未登録の方は<a href="registration.php">こちら</a>
          </li>
-         <li>
+         <!-- <li>
             パスワードを忘れた方は<a href="">こちら</a>
-        </li>
+        </li> -->
       </ul>
       <input type="submit" name="login-button" value="ログイン" />
     </div> 
   </div>
-      
-  <!-- <form> 
-    <div class="form" >
-      <label>メールアドレス</label> 
-      <input class="textbox" type="text" placeholder="***@***">
-      </div>
-      <br>
-      <label>パスワード</label> 
-      <input class="textbox" type="text" placeholder="password">
 
-  </form>
-  <button class="btn" type="button">ログイン</button>
-  <ul>
-    <li>
-      未登録の方は<a href="registration.html">こちら</a>
-    </li>
-    <li>
-      パスワードを忘れた方は<a href="">こちら</a>
-    </li>
-  </ul> -->
 </body>
 

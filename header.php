@@ -5,11 +5,11 @@
         ホーム
       </a>
     </li>
-    <li>
+    <!-- <li>
       <a  href="">
         当サイトについて
       </a>
-    </li>
+    </li> -->
     <li>
       <a  href="mypage.php">
         マイページ
