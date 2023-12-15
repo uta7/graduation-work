@@ -10,10 +10,15 @@
   </div>
 
       <?php
+        // $table = array(
+        //   array("a1", "a2"),
+        //   array("b1", "b2"),
+        // );
+
         $table = array(
-          array("a1", "a2"),
-          array("b1", "b2"),
-        );
+          array("No" => 1, "Eng" =>"a1", "Ja" => "a2"),
+          array("No" => 2, "Eng" =>"s1", "Ja" => "s2")
+        )
       ?>
         <table>
           <thead>
@@ -26,23 +31,22 @@
               <div class="flex">
                 <div class="left">
                   <!-- 苦手度上昇ボタン -->
-                  <button class="badBtn" id="up" type="button">▲</button>
+                  <button class="badBtn" id="up<?php echo $row["No"]; ?>" type="button">▲</button>
                   <!-- 苦手度下降ボタン --><br>
-                  <button class="badBtn" id="down" type="button">▼</button>
+                  <button class="badBtn" id="down<?php echo $row["No"]; ?>" type="button">▼</button>
                 </div>
-                <p class="bad"><p>
+                <p id="bad<?php echo $row["No"]; ?>"><p>
               </div>
             </td>
-            <?php foreach($row as $cel): ?>
-              <td><?= $cel ?></td>
-            <?php endforeach; ?>
+            <td><?= $row["Eng"] ?></td>
+            <td><?= $row["Ja"] ?></td>
           </tr>
           <?php endforeach; ?>
         </tbody>
       </table>
 
   <script>
-    var bad = document.getElementsByClassName("bad");
+    var bad = document.getElementsByID("bad"+);
     const up = document.getElementById('up');
     const down = document.getElementById('down');
     bad.textContent = 0;
