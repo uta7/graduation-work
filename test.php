@@ -51,23 +51,15 @@
     else if(key === "Space"){
       key = " ";
     }
-    else if(key === "Enter") {
+    else if(key === "Enter" && keyString === table[index]["Eng"]){
       key = "";
       keyString = "";
       nextTest();
     }
-    // else if(key === "Enter" && keyString === table[index]["Eng"]){
-    //   key = "";
-    //   background.classlist.add('backgroundRight');
-    //   keyString = "";
-    //   nextTest();
-    // }
-    // else if(key === "Enter" && keyString !== table[index]["Eng"]){
-    //   key = "";
-    //   background.classlist.add('backgroundWrong');
-    //   keyString = "";
-    //   nextTest();
-    // }
+    else if(key === "Enter" && keyString !== table[index]["Eng"]){
+      key = "";
+      keyString = "";
+    }
 
     // 今までの入力キー情報を連結
     keyString += key;
