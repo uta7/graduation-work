@@ -10,5 +10,8 @@ $table = array(
           array("No" => 8, "Eng" => "likely", "Ja" => "おそらく，～しそうだ"),
           array("No" => 9, "Eng" => "offer", "Ja" => "申し出る，提供する"),
           array("No" => 10, "Eng" => "equipment", "Ja" => "機器，装備")
-        )
-      ?>
+);
+
+// JSで使える形(json)にエンコード
+$encodedTable = json_encode($table);
+?>

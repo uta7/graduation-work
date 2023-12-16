@@ -11,24 +11,24 @@
 <body>
 <?php include "header.php" ?>
   <?php include "data.php" ?>
-  <div >
+  <div class="headerMargin">
     <div class="backColorTest">
       <div class="flexPa">
         <input class="checkbox" type="checkbox">
         <div class="fontsizeSmall">この単語を登録する</div>
       </div> 
-      <p><?php echo $table[0]["Eng"]; ?></p>
+      <p id="question"  class="question">
+        <?php echo $table[0]["Eng"]; ?>
+      </p>
       <p id="option1" class="hidden">
-        <?php
-          echo $table[0]["Ja"];
-        ?>
+        <?php echo $table[0]["Ja"];?>
       </p>
     </div>
-    <div >
+    <div>
       <div id="option2" class="hidden" >
-        <div id="wrong" class="testBtn">×</div>
-        <div id="normal" class="testBtn">△</div>
-        <div id="right" class="testBtn">〇</div>
+        <div id="wrong" class="testBtn" onclick="next()">×</div>
+        <div id="normal" class="testBtn" onclick="next()">△</div>
+        <div id="right" class="testBtn" onclick="next()">〇</div>
       </div>
     </div>
   </div>
@@ -58,11 +58,25 @@
       option1.classList.add("hidden")
       option2.classList.add("hidden")
     }
-  }
+  };
 
-
+  let table = <?php echo $encodedTable ?>;
+  let index = 0;
+  function next(){
+    const question = document.getElementById('question');
+    const answer = document.getElementById('option1');
+    // option1.classList.add("hidden")
+    // option2.classList.add("hidden")
+    if (index < table.length) {
+      index++;
+      question.textContent = table[index]["Eng"];
+      answer.textContent = table[index]["Ja"];
+    }
+    else if (index = table.length) {
+      index = 0;
+      question.textContent = table[index]["Eng"];
+      answer.textContent = table[index]["Ja"];
+    }
+  };
 
 </script>
-
-
-

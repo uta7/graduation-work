@@ -11,39 +11,67 @@
 <body>
 <?php include "header.php" ?>
 <?php include "data.php" ?>
-  <div class="backColorTest">
+  <div class="headerMargin" class="backColorTest" id="BackCo">
     <div class="flexPa">
       <input class="checkbox" type="checkbox">
       <div class="fontsizeSmall">この単語を登録する</div>
     </div> 
-    <p id="question"><?php echo $table[0]["Ja"]; ?></p>
+    <p id="questionTest"><?php echo $table[0]["Ja"]; ?></p>
     <!-- タイプした文字 -->
     <p id="out"></p>
   </div>
 </body>
 
 <script>
+  let table = <?php echo $encodedTable ?>;
+  let index = 0;
+  var answer = document.getElementById('out');
+  var background =  document.getElementById('BackCo');
   var keyString = "";
+
+  function nextTest(){
+    const question = document.getElementById('questionTest');
+    if (index < table.length) {
+      index++;
+      question.textContent = table[index]["Ja"];
+    }
+    else if (index = table.length) {
+      index = 0;
+      question.textContent = table[index]["Ja"];
+    }
+  };
+
   window.onkeydown = function(e){
     // 入力キー情報を取得
     var key = e.key;
-    if(key === "Backspace"){
-      key = "";
-      keyString = keyString.slice( 0, -1 ) ;
-    }
-    else if(key === "Delete"){
+    if(key === "Backspace" || key === "Delete" || key === "ArrowLeft"){
       key = "";
       keyString = keyString.slice( 0, -1 ) ;
     }
     else if(key === "Space"){
       key = " ";
     }
-    else if(key === "Enter"){
+    else if(key === "Enter") {
       key = "";
+      keyString = "";
+      nextTest();
     }
+    // else if(key === "Enter" && keyString === table[index]["Eng"]){
+    //   key = "";
+    //   background.classlist.add('backgroundRight');
+    //   nextTest();
+    // }
+    // else if(key === "Enter" && keyString !== table[index]["Eng"]){
+    //   key = "";
+    //   background.classlist.add('backgroundWrong');
+    //   nextTest();
+    // }
+
     // 今までの入力キー情報を連結
     keyString += key;
     // 画面に表示
-    document.getElementById("out").innerHTML = keyString;
+    answer.innerHTML = keyString;
   }
 </script>
+
+

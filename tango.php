@@ -1,9 +1,9 @@
 <?php include "data.php" ?>
-  <button class="testStartBtn" type="button" onclick="location.href='q&a.php'">英⇒日：テスト開始</button>
-  <button class="testStartBtn" type="button" onclick="location.href='test.php'">日⇒英：テスト開始</button>
-  <div class="flexPa" >
-    <p class="marginChi" >単語一覧</p>
-    <p>検索</p>
+  <a class="testStartBtn" href='q&a.php'>英⇒日：テスト開始</a>
+  <a class="testStartBtn"  href='test.php'>日⇒英：テスト開始</a>
+  <div>
+    <p >単語一覧</p>
+    <input id="searchBox" type="text" placeholder="検索" />
   </div>
   <div class="radios" >
     <input id="radio1" class="radio" type="radio" name="word" checked><label for="radio1">全部見せる</label>
@@ -21,9 +21,9 @@
           <div class="flex">
             <div class="left">
               <!-- 苦手度上昇ボタン -->
-              <button class="badBtn" id="up" type="button" onclick="updateBad(<?= $row['No'] ?>, 'up');">▲</button>
+              <button class="badBtn" class="up" type="button" onclick="updateBad(<?= $row['No'] ?>, 'up');">▲</button>
               <!-- 苦手度下降ボタン --><br>
-              <button class="badBtn" id="down" type="button" onclick="updateBad(<?= $row['No'] ?>, 'down');">▼</button>
+              <button class="badBtn" class="down" type="button" onclick="updateBad(<?= $row['No'] ?>, 'down');">▼</button>
             </div>
             <p id="bad<?php echo $row["No"]; ?>">0<p>
           </div>

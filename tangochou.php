@@ -10,7 +10,7 @@
  
 <body>
   <?php include "header.php" ?>
-  <h2>金のフレーズ</h2>
+  <h2 class="headerMargin">金のフレーズ</h2>
   <div class="flexPa">
     <input class="checkbox" type="checkbox">
     <p class="fontsizeSmall" >この単語帳をマイページに登録する</p>

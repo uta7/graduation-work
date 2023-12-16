@@ -10,7 +10,7 @@
  
 <body>
   <?php include "header.php" ?>
-  <h2>登録済みの単語帳一覧</h2>
+  <h2 class="headerMargin">登録済みの単語帳一覧</h2>
   <div>
     <div class="tangochou">
       <input class="checkbox" type="checkbox">
