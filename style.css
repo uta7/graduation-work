@@ -1,0 +1,212 @@
+/*---------- 共通 ----------*/
+body {
+  font-size: 2em; 
+  text-align: center;
+}
+
+#nav {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	z-index: 1001;
+	background-color: #d48537;
+	box-shadow: 0 2px 2px #4b4b4b;
+}
+
+#nav ul li a:active {
+	color: black;
+}
+
+#nav ul {
+  list-style-type: none;
+	width: 100vw;
+  padding: 1vh;
+  margin: 0;
+}
+
+#nav ul li {
+  display: inline; 
+	margin: 2% 2%;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+#nav ul li a:hover {
+	text-decoration: underline;
+}
+
+.flex {
+	position: relative;
+	display: flexbox;
+	flex-direction: row;
+	vertical-align: center;
+}
+.flex-c {
+	display: flexbox;
+	flex-direction: column;
+}
+.headerMargin {
+	margin-top: 12vh;
+}
+
+/*---------- 単語帳 ----------*/
+.flexPa {
+	display: flex;
+	justify-content: center;
+}
+
+.testStartBtn {
+  display: inline-block;
+  padding: 0.5em 1em;
+	margin: 1em 0.5em;
+  text-decoration: none;
+  background: orange;
+  color: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 1px #627295;
+  border-radius: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.testStartBtn:active  {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.radios {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.radio {
+	transform:scale(2.0);
+	margin: 0.3rem;
+	padding: 0.3rem;
+	accent-color: rgb(255, 179, 0);
+}
+
+.badBtn {
+	/* width: 50%;
+	height: 50%; */
+	font-size: 50%;
+	text-align: center;
+}
+/* .up {
+	background: rgba(255, 0, 0, 0.5);
+}
+.bad {
+	background: rgba(0, 255, 0, 0.5);
+} */
+
+table {
+	width: 100vw;
+	/* border-collapse: separate;
+	border-spacing: 10px 10px; */
+	vertical-align: middle;
+}
+
+table, td, th {
+	border: 1px black solid;
+}
+
+.left {
+	position: absolute;
+	top: -55%;
+	left: 10%;
+}
+.tangochou {
+	margin: 4% auto;
+}
+.tangochou a {
+	color: #000;
+	text-decoration: none;
+}
+.tangochou a:hover {
+	text-decoration: underline;
+}
+
+#searchBox {
+	height: 70%;
+}
+
+
+/*---------- test ----------*/
+.backColorTest {
+	background-color: white;
+	font-weight: bold;
+}
+
+.backgroundRight {
+	background-color: aquamarine;
+}
+.backgroundWrong {
+	background-color: red;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+#option2 {
+	display: flex;
+}
+
+.testBtn {
+	font-size: 100%;
+	width: 33vw;
+	height: auto;
+	padding: 2rem 1rem;
+	border-top: #000 2px solid;
+	border-bottom: #000 2px solid;
+	border-radius: 5%;
+}
+
+#wrong {
+	background-color: rgba(255, 0, 0, 0.5);
+	pointer-events: auto;
+	border-left: #000 2px solid;
+	border-right: #000 2px solid;
+	border-radius: 5%;
+}
+#wrong:hover {
+	background-color: rgba(255, 0, 0, 1.0);
+}
+
+#normal {
+	background-color: rgba(0, 255, 0, 0.5);
+	pointer-events: auto;
+	border-right: #000 2px solid;
+	border-radius: 5%;
+}
+#normal:hover {
+	background-color: rgba(0, 255, 0, 1.0);
+}
+
+#right {
+	background-color: rgba(0, 0, 255, 0.5);
+	pointer-events: auto;
+	border-right: #000 2px solid;
+	border-radius: 5%;
+}
+#right:hover {
+	background-color: rgba(0, 0, 255, 1.0);
+}
+
+.fontsizeSmall {
+	font-size: 70%;
+	margin: 1% 1%;
+}
+
+.checkbox {
+	accent-color: orange;
+	transform: scale(2.5);
+}
