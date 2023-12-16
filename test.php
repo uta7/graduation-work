@@ -59,11 +59,13 @@
     // else if(key === "Enter" && keyString === table[index]["Eng"]){
     //   key = "";
     //   background.classlist.add('backgroundRight');
+    //   keyString = "";
     //   nextTest();
     // }
     // else if(key === "Enter" && keyString !== table[index]["Eng"]){
     //   key = "";
     //   background.classlist.add('backgroundWrong');
+    //   keyString = "";
     //   nextTest();
     // }
 

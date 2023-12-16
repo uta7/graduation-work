@@ -6,9 +6,9 @@
     <input id="searchBox" type="text" placeholder="検索" />
   </div>
   <div class="radios" >
-    <input id="radio1" class="radio" type="radio" name="word" checked><label for="radio1">全部見せる</label>
-    <input id="radio2" class="radio" type="radio" name="word" onclick="hiddenWords(<?= $row['No'] ?>, 'Eng');" ><label for="radio2">英語を隠す</label>
-    <input id="radio3" class="radio" type="radio" name="word" onclick="hiddenWords(<?= $row['No'] ?>, 'Jp');" ><label for="radio3">日本語を隠す</label>
+    <input id="radio1" class="radio" type="radio" name="word" onclick="radioHidden()" checked><label for="radio1">全部見せる</label>
+    <input id="radio2" class="radio" type="radio" name="word" onclick="radioHidden()" ><label for="radio2">英語を隠す</label>
+    <input id="radio3" class="radio" type="radio" name="word" onclick="radioHidden()" ><label for="radio3">日本語を隠す</label>
   </div>
   <table>
     <thead>
@@ -28,8 +28,12 @@
             <p id="bad<?php echo $row["No"]; ?>">0<p>
           </div>
         </td>
-        <td id="EngWord<?php echo $row["No"];?>"><?= $row["Eng"] ?></td>
-        <td id="JpWord<?php echo $row["No"];?>"><?= $row["Ja"] ?></td>
+        <td>
+          <div class="EngWords" id="EngWord<?php echo $row['No']; ?>" onclick="hiddenToggle(<?= $row['No'] ?>, 'EN');"><?= $row["Eng"] ?></div>
+        </td>
+        <td>
+          <div class="JpWords" id="JpWord<?php echo $row['No']; ?>" onclick="hiddenToggle(<?= $row['No'] ?>, 'JP');"><?= $row["Ja"] ?></div>
+        </td>
       </tr>
       <?php endforeach; ?>
     </tbody>
@@ -46,17 +50,43 @@
     }
   }
 
-  function hiddenWords(rowID, type) {
-    var EngWordId = "EngWord" + rowId;
-    var JpWordId = "JpWord" + rowId;
-    var EngWords = document.getElementById(EngWordId);
-    var JpWords = document.getElementById(JpWordId);
-    if (type === "Eng") {
-      EngWords.classList.toggle("hidden");
-    } else if (type === "Jp") {
-      JpWords.classList.toggle("hidden");
+  function hiddenToggle(rowID, type){
+    var ENID ="EngWord" + rowID;
+    var JPID ="JpWord" + rowID;
+    var EngWords = document.getElementById("ENID");
+    var JpWords = document.getElementById("JPID");
+    if (type === "EN" && EngWords.style.visibility === "hidden") {
+      EngWords.style.visibility = "visible"
+    } else if (type === "EN" && EngWords.style.visibility === "visible") {
+      EngWords.style.visibility = "hidden"
+    } else if (type === "JP" && EngWords.style.visibility === "hidden") {
+      JpWords.style.visibility = "visible"
+    } else if (type === "JP" && EngWords.style.visibility === "visible") {
+      JpWords.style.visibility = "hidden"
     }
   }
 
+  function radioHidden() {
+    var radio = document.getElementsByName("word");
+    var EN = document.getElementsByClassName("EngWords");
+    var JP = document.getElementsByClassName("JpWords");
+    let table = <?php echo $encodedTable ?>;
 
+    if(radio.item(0).checked){
+      for(let i = 0; i < table.length; i++){
+        EN.item(i).style.visibility = "visible"
+        JP.item(i).style.visibility = "visible"
+      }
+    } else if(radio.item(1).checked){
+      for(let j = 0; j < table.length; j++){
+        EN.item(j).style.visibility = "hidden"
+        JP.item(j).style.visibility = "visible"
+      }
+    } else if(radio.item(2).checked){
+      for(let k = 0; k < table.length; k++){
+        EN.item(k).style.visibility = "visible"
+        JP.item(k).style.visibility = "hidden"
+      }
+    }
+  }
   </script>

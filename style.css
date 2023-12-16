@@ -118,6 +118,13 @@ table, td, th {
 	border: 1px black solid;
 }
 
+.EngWords{
+	pointer-events: auto;
+}
+.JpWords{
+	pointer-events: auto;
+}
+
 .left {
 	position: absolute;
 	top: -55%;

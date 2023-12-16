@@ -12,7 +12,7 @@
 <?php include "header.php" ?>
   <?php include "data.php" ?>
   <div class="headerMargin">
-    <div class="backColorTest">
+    <div class="backColorTest" id="subBody">
       <div class="flexPa">
         <input class="checkbox" type="checkbox">
         <div class="fontsizeSmall">この単語を登録する</div>
@@ -35,28 +35,36 @@
 </body>
 
 <script>
-  const body = document.body;
+  // const body = document.body;
+  const body = document.getElementById("subBody");
   const option1 = document.getElementById('option1');
   const option2 = document.getElementById('option2');
   var wrong = document.getElementById('wrong');
   var normal = document.getElementById('normal');
   var right = document.getElementById('right');
 
-  body.addEventListener('click', () => {
-    option1.classList.remove("hidden")
-    option2.classList.remove("hidden")
+  body.addEventListener('click', (e) => {
+    // e.target;
+    // option1.classList.remove("hidden")
+    // option2.classList.remove("hidden")
+    option1.style.visibility = 'visible';
+    option2.style.visibility = 'visible';
   });
 
   window.onkeydown = function(e){
     // 入力キー情報を取得
     var key = e.key;
     if(key === "Enter"){
-      option1.classList.remove("hidden")
-      option2.classList.remove("hidden")
+      // option1.classList.remove("hidden")
+      // option2.classList.remove("hidden")
+      option1.style.visibility = 'visible';
+    option2.style.visibility = 'visible';
     }
     else if(key === "Delete"){
-      option1.classList.add("hidden")
-      option2.classList.add("hidden")
+      // option1.classList.add("hidden")
+      // option2.classList.add("hidden")
+      option1.style.visibility = 'hidden';
+    option2.style.visibility = 'hidden';
     }
   };
 
@@ -64,19 +72,23 @@
   let index = 0;
   function next(){
     const question = document.getElementById('question');
-    const answer = document.getElementById('option1');
-    // option1.classList.add("hidden")
-    // option2.classList.add("hidden")
+
+    // console.log(option1);
+    // console.log(option2);
+
     if (index < table.length) {
       index++;
-      question.textContent = table[index]["Eng"];
-      answer.textContent = table[index]["Ja"];
     }
     else if (index = table.length) {
       index = 0;
-      question.textContent = table[index]["Eng"];
-      answer.textContent = table[index]["Ja"];
     }
+    option1.style.visibility = 'hidden';
+    option2.style.visibility = 'hidden';
+    // option1.classList.add("hidden");
+    // option2.classList.add("hidden");
+    question.textContent = table[index]["Eng"];
+    option1.textContent = table[index]["Ja"];
+
   };
 
 </script>
